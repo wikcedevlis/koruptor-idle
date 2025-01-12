@@ -113,3 +113,60 @@ function updateDisplay() {
   incomeDisplay.textContent = incomePerTap;
 }
 
+let money = 10000;  // Uang awal
+let corruptionLevel = 1;
+
+// Fungsi untuk memperbarui tampilan uang
+function updateDisplay() {
+    document.getElementById("moneyDisplay").innerText = "Uang: " + money;
+}
+
+// Event KPK
+function triggerKPKCheck() {
+    let randomChance = Math.random();
+    if(randomChance < 0.05) {  // 5% chance untuk memicu
+        alert("KPK datang untuk memeriksa laporan Anda!");
+        money -= 5000;  // Pengurangan uang karena denda
+        updateDisplay();  // Memperbarui tampilan UI
+    }
+}
+setInterval(triggerKPKCheck, 30000);  // Setiap 30 detik
+
+// Event Skandal Netizen
+function triggerViralScandal() {
+    let randomChance = Math.random();
+    if(randomChance < 0.1) {  // 10% chance untuk memicu
+        alert("Netizen menyebarkan bukti skandal Anda!");
+        money -= 2000;  // Pengurangan uang
+        updateDisplay();  // Memperbarui tampilan UI
+    }
+}
+setInterval(triggerViralScandal, 60000);  // Setiap 60 detik
+
+// Korupsi Level
+function increaseCorruption() {
+    if(corruptionLevel < 10) {
+        corruptionLevel++;
+        money += 1000 * corruptionLevel;  // Dapatkan lebih banyak uang
+        alert("Korupsi Anda meningkat! Level: " + corruptionLevel);
+        updateDisplay();  // Memperbarui tampilan UI
+    }
+}
+setInterval(increaseCorruption, 15000);  // Setiap 15 detik
+
+// Risiko Korupsi
+function handleCorruptionRisk() {
+    if(corruptionLevel > 5) {
+        let randomChance = Math.random();
+        if(randomChance < 0.2) {  // 20% chance untuk memicu risiko
+            alert("Risiko korupsi tinggi! Denda atau pemeriksaan datang.");
+            money -= 5000;  // Pengurangan uang
+            updateDisplay();  // Memperbarui tampilan UI
+        }
+    }
+}
+setInterval(handleCorruptionRisk, 30000);  // Setiap 30 detik
+
+// Memperbarui tampilan awal
+updateDisplay();
+

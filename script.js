@@ -48,9 +48,9 @@ const upgradeButton = document.getElementById('upgrade-button');
 const eventMessage = document.getElementById('event-message');
 
 // Tambahkan suara
-const tapSound = new Audio('tap.mp3');
-const upgradeSound = new Audio('upgrade.mp3');
-const eventSound = new Audio('event.mp3');
+const tapSound = new Audio('click-151673.mp3');
+const upgradeSound = new Audio('level-up-191997.mp3');
+const eventSound = new Audio('notification-22-270130.mp3');
 
 // Tap untuk mendapatkan uang
 tapButton.addEventListener('click', () => {

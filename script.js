@@ -18,6 +18,7 @@ const eventSound = new Audio('notification-22-270130.mp3');
 
 // Tap untuk mendapatkan uang
 tapButton.addEventListener('click', () => {
+  console.log("Tombol Tap ditekan");
   money += incomePerTap;
   tapSound.play(); // Putar suara
   updateDisplay();
@@ -25,6 +26,7 @@ tapButton.addEventListener('click', () => {
 
 // Upgrade untuk meningkatkan pendapatan per klik
 upgradeButton.addEventListener('click', () => {
+  console.log("Tombol Upgrade ditekan");
   if (money >= upgradeCost) {
     money -= upgradeCost;
     incomePerTap += 1;

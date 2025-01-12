@@ -5,8 +5,8 @@ let idleIncome = 0;
 const idleInterval = 1000; // 1 detik
 const eventInterval = 5000; // Event setiap 5 detik
 
-const moneyDisplay = document.getElementById('money');
-const incomeDisplay = document.getElementById('income');
+const moneyDisplay = document.getElementById('money-display');
+const incomeDisplay = document.getElementById('income-display');
 const tapButton = document.getElementById('tap-button');
 const upgradeButton = document.getElementById('upgrade-button');
 const eventMessage = document.getElementById('event-message');
